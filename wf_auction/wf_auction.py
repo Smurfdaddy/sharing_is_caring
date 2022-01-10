@@ -197,7 +197,7 @@ class Network:
         payload = copy.deepcopy(self.riven_template_wm)
         payload["starting_price"] = int(riven["data-price"])
         payload["buyout_price"] = int(riven["data-price"])
-        payload["item"]["weapon_url_name"] = riven["data-weapon"].lower().replace("&", "and")
+        payload["item"]["weapon_url_name"] = riven["data-weapon"].lower().replace("&", "and").replace("dark_split-sword", "dark_split_sword_(dual_swords)")
         payload["item"]["name"] = riven["data-name"].lower()
         payload["item"]["mastery_level"] = int(riven["data-mr"])
         payload["item"]["mod_rank"] = int(riven["data-rank"])
@@ -235,7 +235,7 @@ class Network:
 
     def upload_riven_wm(self, payload):
         response = requests.post("https://api.warframe.market/v1/auctions/create", data = json.dumps(payload, separators=(',', ':')), headers = self.headers_wm)
-        if response.status_code != 200: print("Auction", payload["item"]["weapon_url_name"].capitalize(), payload["item"]["name"], "Creation Failed:", response.status_code)
+        if response.status_code != 200: print("Auction", payload["item"]["weapon_url_name"], payload["item"]["name"], "Creation Failed:", response.status_code)
         else: print("wm +")
 
     def delete_riven_wm(self, riven_id):
