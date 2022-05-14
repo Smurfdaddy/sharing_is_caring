@@ -1,9 +1,23 @@
 {
-    "prefix": "WTS :tdm: ",
-    "postfix": ":tdm: PMO",
     "RM-ID": 14947,
+    "upper_boundry": 3000,
+    "lower_boundry": 0,
+    "language": "eng",
+    "add_prices": true,
+    "misc_settings": {
+        "eng": {
+            "prefix": "WTS :tdm: ",
+            "postfix": " :tdm: PMO",
+            "tc_char_limit": 175
+        },
+        "cn": {
+            "prefix": "出 :tdm: ",
+            "postfix": " :tdm: 请带价",
+            "tc_char_limit": 135
+        }
+    },
     "custom_buttons": [
-        {"name": "WFM TY", "content": "Thanks! Please consider giving me a upvote on warframe.market/profile/Smurfdaddy :)"},
-        {"name": "WTB PRIME", "content": "WTB FULL sets :platinum: [Atlas Prime]25 [Banshee Prime]30 [Wukong Prime][Chroma Prime]35 [Zephyr Prime][Mirage Prime]40 [Prisma Shade]50 [Kronen Prime]100 platinum each"}
+        {"name": "WTB Trash", "content": "WTB prime trash :tdm: 15/25:ducats:=1pl 45/65:ducats:=4pl 100:ducats:=8pl :tdm: 6 filled anasas for 50pl :tdm: full trades only!"},
+        {"name": "WFM TY", "content": "If you are happy with my service a +REP on my warframe.market profile would be much appreciated!"}
     ]
 }
